@@ -1,0 +1,474 @@
+:root {
+    --primary-color: midnightblue;
+    --highlight-color: aliceblue;
+    --button-color: DarkGoldenrod;
+    --font-family-main: 'Garamond', serif;
+    --font-family-secondary: 'Great Vibes', cursive;
+    --card-width: 290px;
+    --card-height: 440px;
+}
+body{
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    margin: 5px 5px 5px 5px;
+    line-height: 1.6;
+    background-image: url('/images/FONDOS-INVITACIONES-R-C (1080 x 1920 px) (1).webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Esto asegura que cubra toda la altura del viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#initials {
+    animation: heartbeat 1.5s infinite;
+    font-family: var(--font-family-main);
+    font-size: 200px;
+    font-weight: 200;
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+#hover-text {
+    position: absolute;
+    bottom: 250px;  /* Ajusta esta propiedad para cambiar la distancia vertical desde #initials */
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-family: var(--font-family-main);
+    opacity: 1;  /* Siempre visible */
+    white-space: nowrap;
+    pointer-events: none;  /* Evita que el texto interfiera con el clic */
+    padding: 10px 20px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.contenedor-play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    text-align: center;
+}
+.contenedor-play h1 {
+    font-family: var(--font-family-secondary);
+    color: azure;
+    font-size: 30px;
+    font-weight: 100;
+    margin-top: 5px;
+}
+.icono-contenedor {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: aliceblue;
+    color: goldenrod;
+}
+.icono-contenedor i {
+    font-size: 22px;
+}
+.contenedor-central {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+}
+.contenedor-central h1 {
+    font-family: var(--font-family-secondary);
+    font-size: 70px;
+    color: azure;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.contenedor-central h2 {
+    font-family: var(--font-family-secondary);
+    font-size: 90px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 200;
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+}
+.contenedor-central h4 {
+    font-family: var(--font-family-secondary);
+    font-size: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 200;
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+}
+@keyframes shine {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+.contenedor-central p {
+    font-family: var(--font-family-secondary);
+    color: azure;
+    font-size: 50px;
+    margin-top: 0px;
+}
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 20px;
+    margin-top: -10px;
+}
+.unidad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--highlight-color);
+    margin: 0 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100px;
+    height: 100px;
+}
+.numero {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+}
+.etiqueta {
+    font-size: 1em;
+    color: var(--button-color);
+    text-transform: none;
+    font-weight: 400;
+    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 1.5s infinite linear;
+}
+.contenedor-central h3 {
+    font-family: var(--font-family-main);
+    color:  azure;
+    font-size: 30px;
+    margin: 40px;
+    font-weight: 400;
+    font-style: oblique;
+}
+.galeria {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 10px;
+}
+.galeria img {
+    width: 290px;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid var(--highlight-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.imagen-galeria:hover {
+    filter: brightness(70%);
+    cursor: pointer;
+}
+.contenedor-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+.card {
+    border: 10px solid var(--highlight-color);
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: white;
+    width: var(--card-width);
+    height: var(--card-height);
+}
+
+.icon {
+    width: 40%;
+    height: auto;
+}
+.card h1 {
+    font-family: var(--font-family-secondary);
+    color: midnightblue;
+    font-size: 40px;
+}
+.card h2 {
+    font-family: var(--font-family-main);
+    color: midnightblue;
+    font-size: 17px;
+    margin-top: -10px;
+    font-weight: 300;
+    font-size: oblique;
+}
+.card h3 {
+    font-family: var(--font-family-main);
+    color: midnightblue;
+    font-size: 16px;
+    margin-top: -5px;
+    font-weight: 300;
+    font-style: oblique;
+}
+.card h4 {
+    font-family: var(--font-family-main);
+    font-weight: 300;
+    color: midnightblue;
+    font-size: 16px;
+    margin-top: -35px;
+    font-style: oblique;
+}
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: goldenrod;
+    color: white;
+}
+.card p{
+    font-family: var(--font-family-main);
+    color: midnightblue;
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#card8 {
+    width: 290px;
+    height: 515px;
+}
+#card8 img {
+    width: 290px;
+    height: auto;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in-element {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+h5 {
+    font-family: var(--font-family-secondary);
+    font-size: 80px;
+    margin-top: -60px;
+    font-weight: 200;
+    color: azure;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+h6{
+    font-family: var(--font-family-secondary);
+    font-size: 45px;
+    color: midnightblue;
+    margin-bottom: 5px;
+    margin-top: 60px;
+}
+.empresa-logo {
+    text-align: center;
+    margin-top: 0px;
+}
+.empresa-logo img {
+    width: 80px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+        #initials {
+            font-size: 120px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+            padding: 10px;
+        }
+    
+        #hover-text {
+            font-size: 16px; /* Ajustar el tamaño del texto para mantener la proporción */
+            padding: 8px 16px;
+            bottom: 220px; /* Ajustar la posición para pantallas pequeñas */
+            margin: 0 0 0 0;
+        }
+    .contenedor-central h1 {
+        margin-top: 20px;
+        font-size: 32px;
+        font-weight: 200;
+        margin-bottom: 20px;
+    }
+
+    .contenedor-central h2 {
+        font-size: 70px;
+        margin-top: -30px;
+    }
+
+    .contenedor-central h4{
+        font-size: 50px;
+        margin-bottom: -10px;
+        margin-top: -10px;
+    }
+
+    .contenedor-central p {
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .contenedor-central h5{
+        font-size: 30px;
+        margin-top: 0;
+        color: azure;
+        margin-bottom: 20px;
+    }
+    .unidad {
+        width: 80px; /* Ajusta el tamaño según sea necesario */
+        height: 80px; /* Ajusta el tamaño según sea necesario */
+        margin: 5px;
+    }
+
+    .numero {
+        font-size: 1.8em; /* Ajusta el tamaño según sea necesario */
+    }
+
+    .etiqueta {
+        font-size: 0.8em; /* Ajusta el tamaño según sea necesario */
+    }
+
+    .contenedor-central h3 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .card img {
+        width: 30%;
+    }
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-cards {
+        grid-template-columns: 1fr;
+    }
+    .contenedor-cards {
+        grid-template-columns: 1fr;
+    }
+    .card h1{
+        color: midnightblue;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .card h2{
+        color: midnightblue;
+        font-size: 20px;
+        font-style: oblique;
+        margin-top: 10px;
+    }
+    .card h3{
+        color: midnightblue;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .card h4{
+        color: midnightblue;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .card p{
+        font-family: var(--font-family-main);
+        color: midnightblue;
+        font-size: 25px;
+        font-style: oblique;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+    h6{
+        font-family: var(--font-family-secondary);
+        font-size: 45px;
+        color: midnightblue;
+        margin-bottom: 5px;
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contenedor-cards {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
