@@ -1,7 +1,10 @@
-// script.js
 function showInvitation() {
-    document.body.classList.remove('bg-cover');
-    document.body.classList.add('bg-contain');
-    document.getElementById('overlay').classList.add('hidden');
-    document.getElementById('invitation').classList.remove('hidden');
+    const overlay = document.getElementById('overlay');
+    const invitation = document.getElementById('invitation');
+    overlay.classList.add('fade-out');
+    setTimeout(() => {
+        overlay.classList.add('hidden');
+        invitation.classList.remove('hidden');
+        invitation.classList.add('show');
+    }, 1000); // La duración debe coincidir con la transición de la opacidad
 }

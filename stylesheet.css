@@ -29,11 +29,10 @@ body {
 
 /* Clase para la vista de la invitación */
 .bg-contain {
-    background-image: url(/images/11.png);
-    background-repeat: round;
-    background-size: contain;
+    background-image: url(/images/1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    background-color: var(--color-crema); /* Fondo de respaldo para evitar espacios en blanco */
 }
 #overlay {
     position: absolute;
@@ -46,7 +45,12 @@ body {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: opacity 1s ease, transform 1s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 #initials {
     animation: heartbeat 1.5s infinite;
@@ -58,6 +62,7 @@ body {
     cursor: pointer;
     position: relative;
     color: indianred;
+    transition: transform 1s ease;
 }
 #hover-text {
     color: white;
@@ -76,6 +81,22 @@ body {
 }
 .hidden {
     display: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+#invitation {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#invitation.show {
+    opacity: 1;
+    transform: scale(1);
 }
 @keyframes heartbeat {
     0%, 100% {
@@ -373,8 +394,7 @@ h6{
         #hover-text {
             font-size: 25px; /* Ajustar el tamaño del texto para mantener la proporción */
             padding: 8px 16px;
-            bottom: 300px; /* Ajustar la posición para pantallas pequeñas */
-            margin: 0 0 0 0;
+            bottom: 200px; /* Ajustar la posición para pantallas pequeñas */
             font-style: oblique;
         }
     .contenedor-play h1{
