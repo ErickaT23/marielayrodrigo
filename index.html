@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- HTML Meta Tags -->
-    <title>Nos casamos Arilis & Ángel</title>
+    <title>Nos casamos Mariela & Rodrigo</title>
     <meta name="description" content="Nuestro momento ha llegado" />
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://noscasamosarilisyangel.netlify.app/index.html">
@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="/stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="preload" href="/images/FONDOS-INVITACIONES-R-C (1080 x 1920 px) (1).webp" as="image">
     <script src="https://kit.fontawesome.com/8435ad2454.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div id="overlay">
-        <h2 id="initials">A|A</h2>
+<body class="bg-cover">
+    <div id="overlay" onclick="showInvitation()">
+        <h2 id="initials">M | R</h2>
         <h1 id="hover-text">Presiona aquí</h1>
     </div>
     <div id="invitation" class="hidden">
@@ -32,14 +32,14 @@
             <div id="playPauseButton" class="icono-contenedor">
                 <i id="iconoPlayPause" class="fas fa-play"></i>
             </div>
-            <audio id="audioPlayer" src="/music/videoplayback.mp3"></audio>
+            <audio id="audioPlayer" src="/music/videoplayback.mp4"></audio>
         </div>
         <div class="contenedor-central">
             <h1>¡Nos Casamos!</h1>
-            <h2>Arilis Gámez</h2>
+            <h2>Mariel</h2>
             <h4>&</h4>
-            <h2>Ángel Ovalle</h2>
-            <p>03 . 08 . 2024</p>
+            <h2>Rodrigo</h2>
+            <p>23 . 11 . 2024</p>
             <div id="contador" class="contador">
                 <div class="unidad">
                     <span id="dias" class="numero"></span>
@@ -58,14 +58,15 @@
                     <span class="etiqueta">Segundos</span>
                 </div>
             </div>
-            <h3>"Al final, las almas gemelas se encuentran porque tienen el mismo escondite". -Robert Brault</h3>
+            <h3>"Intercambio equivalente, te daré la mitad de mi vida, dame la mitad de la tuya."</h3>
+            <h3>- Edward Elric</h3>
             <div class="galeria">
-                <img src="/images/h-7.jpeg" alt="Descripción" class="imagen-galeria">
-                <img src="/images/v-1.jpeg" alt="Descripción" class="imagen-galeria">
-                <img src="/images/h-2.jpeg" alt="Descripción" class="imagen-galeria">
-                <img src="/images/v-8.jpeg" alt="Descripción" class="imagen-galeria">
-                <img src="/images/h-3.jpeg" alt="Descripción" class="imagen-galeria">
-                <img src="/images/vs-6.png" alt="Descripción" class="imagen-galeria">
+                <img src="/images/h1.jpeg" alt="Descripción" class="imagen-galeria">
+                <img src="/images/v1.jpeg" alt="Descripción" class="imagen-galeria">
+                <img src="/images/h2.jpeg" alt="Descripción" class="imagen-galeria">
+                <img src="/images/v2.jpeg" alt="Descripción" class="imagen-galeria">
+                <img src="/images/h3.jpeg" alt="Descripción" class="imagen-galeria">
+                <img src="/images/v4.jpeg" alt="Descripción" class="imagen-galeria">
             </div>
             <div class="contenedor-cards">
                 <div class="card" id="card-invitaciones">
@@ -75,55 +76,64 @@
                     <p class="guest-info" id="child-info"></p>
                 </div>
                 <div class="card" id="card2">
-                    <img src="/icons/rings.svg" class="icon" alt="icono-fiesta">
-                    <h1>Celebremos juntos</h1>
-                    <h2>Hotel el Remanso</h2>
-                    <h3>Sobre carretera Tecpan - Chiché</h3>
+                    <img src="/icons/church.png" class="icon" alt="icono-fiesta">
+                    <h1>Ceremonia</h1>
+                    <h2>Rectoría Beatas de Belén</h2>
+                    <h3>14 Calle 9-30, Cdad. de Guatemala</h3>
                     <h4>16:00 hrs</h4>
-                    <a class="boton" href="https://maps.app.goo.gl/e8XgjTDqWiSTUWBd6" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+                    <a class="boton" href="https://maps.app.goo.gl/74k42xq7RE6bpryT9" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+                </div>
+                <div class="card" id="card2">
+                    <img src="/icons/rings.png" class="icon" alt="icono-fiesta">
+                    <h1>Celebremos Juntos</h1>
+                    <h2>Club Guatemala</h2>
+                    <h3>7a Avenida 12-75 zona 1, Cdad. de Guatemala</h3>
+                    <h4>18:00 hrs</h4>
+                    <a class="boton" href="https://maps.app.goo.gl/SeQ35c1uQoq6ABSd7" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
                 </div>
                 <div class="card" id="card3">
-                    <img src="/icons/gift.svg" class="icon" alt="icono-regalo">
-                    <h1>Lluvia de Sobres</h1>
-                    <h2>Lo que más queremos es compartir contigo nuestro gran día, pero si deseas regalarnos algo habrá un cofre en la entrada para que puedas dejar tu sobre con efectivo.</h2>
+                    <img src="/icons/giftbox.png" class="icon" alt="icono-regalo">
+                    <h1>Obsequios</h1>
+                    <h2>Lo que más queremos es compartir contigo nuestro gran día, pero si deseas regalarnos tenemos una pequeña lista de regalos.</h2>
+                    <a class="boton" href="https://www.cemaco.com/list/bodawolfordandrade" target="_blank" rel="noopener noreferrer">Bodas Cemaco</a>
                 </div>
                 <div class="galeria">
-                    <img src="/images/h-4.jpeg" alt="Descripción" class="imagen-galeria">
+                    <img src="/images/h4.jpeg" alt="Descripción" class="imagen-galeria">
                 </div>
                 <div class="card" id="card4">
-                    <img src="/icons/dress-code.svg" class="icon" alt="icono-dresscode">
+                    <img src="/icons/dresscode.png" class="icon" alt="icono-dresscode">
                     <h1>Dress Code</h1>
-                    <h2>Viste elegante y no olvides abrigarte muy bien. Hemos reservado el color blanco, agradecemos que uses otro color y seas parte de nuestro gran día.</h2>
+                    <h2>Viste elegante y no olvides abrigarte muy bien. Hemos reservado el color blanco y el beige, agradecemos que uses otro color y seas parte de nuestro gran día</h2>
                 </div>
                 <div class="card" id="card5">
-                    <img src="/icons/music.svg" class="icon" alt="icono-musica">
+                    <img src="/icons/music.png" class="icon" alt="icono-musica">
                     <h1>Playlist</h1>
                     <h2>Nos encantaría que nos sugieras esas canciones que sabes que son geniales y no pueden faltar en nuestra boda.</h2>
                     <a href="https://open.spotify.com/playlist/7CCSs1Q2lkon6BZBksn95X?si=l2TyKE_ETLeCKEgwAIiRpQ&pt=c76c269acadbca81a16254787ffe6bac&pi=XUje4W5XQCuyM" class="boton" target="_blank" rel="noopener noreferrer">Agrega canciones</a>
                 </div>
                 <div class="galeria">
-                    <img src="/images/h-9.jpeg" alt="Descripción" class="imagen-galeria">
+                    <img src="/images/h5.jpeg" alt="Descripción" class="imagen-galeria">
                 </div>
                 <div class="card" id="card6">
-                    <img src="/icons/camera.svg" class="icon" alt="icono-filtro">
+                    <img src="/icons/filter.png" class="icon" alt="icono-filtro">
                     <h1>Filtro</h1>
-                    <h2>Toma tus historias para Instagram usando nuestros filtros, y no olvides etiquetarnos y usar #noscasamosarilisyangel.</h2>
+                    <h2>Toma tus historias para Instagram usando nuestros filtros, y no olvides etiquetarnos y usar #noscasamosmarielyrodrigo.</h2>
                     <a href="https://www.instagram.com/ar/492624986607591/" class="boton" target="_blank" rel="noopener noreferrer">Toma una Historia</a>
                 </div>
                 <div class="card" id="card7">
-                    <img src="/icons/rsvp.svg" class="icon" alt="icono-asistencia">
+                    <img src="/icons/rsvp.png" class="icon" alt="icono-asistencia">
                     <h1>Confirmación</h1>
-                    <h2>Confirma tu asistencia antes del 20 de Julio, gracias por acompañarnos.</h2>
+                    <h2>Para nosotros es muy importante que confirmes tu asistencia antes del 31 de Octubre, o bien indicarnos sino podrás acompañarnos.</h2>
                     <a href="https://wa.me/50251783145?text=Gracias%20por%20la%20invitaci%C3%B3n." class="boton" target="_blank" rel="noopener noreferrer">Confirma tu asistencia</a>
                 </div>
                 <div class="card" id="card8">
-                    <img class="imagen-card" src="/images/vs-6.jpg" alt="foto-vertical-de-pareja">
+                    <img class="imagen-card" src="/images/v3.jpeg" alt="foto-vertical-de-pareja">
                 </div>
             </div>
             <h5>¡Te esperamos con mucho cariño!</h5>
-            <h2>Arilis Gámez</h2>
+            <h2>Mariel</h2>
             <h4>&</h4>
-            <h2>Ángel Ovalle</h2>
+            <h2>Rodrigo</h2>
             <div class="empresa-logo">
                 <a href="https://wa.me/message/IQSYL2JZU65UL1" target="_blank" rel="noopener noreferrer">
                     <img src="/images/2.png" alt="Logo de la Empresa">
@@ -138,6 +148,7 @@
     <script src="/Js/contador.js" defer></script>
     <script src="/Js/open.js" defer></script>
     <script src="/Js/loads.js" defer></script>
+    <script src="/Js/invitation.js" defer></script>
 </body>
 </html>
 

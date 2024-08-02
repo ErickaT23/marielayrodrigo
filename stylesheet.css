@@ -1,27 +1,39 @@
 :root {
-    --primary-color: midnightblue;
-    --highlight-color: aliceblue;
-    --button-color: DarkGoldenrod;
-    --font-family-main: 'Garamond', serif;
-    --font-family-secondary: 'Great Vibes', cursive;
+    --primary-color: maroon;
+    --highlight-color: white;
+    --font-cinzel: 'Cinzel Decorative', serif;
+    --font-allura: 'Allura', cursive;
+    --font-greatvibes:'Great Vibes', cursive;
+    --font-alexbrush:'Alex Brush', cursive;
+    --font-garamond:'Cormorant Garamond', serif;
     --card-width: 290px;
     --card-height: 440px;
 }
-body{
+body {
     font-family: var(--font-family-main);
     font-weight: 300;
-    color: var(--primary-color);
-    background-color: var(--bg-color);
-    margin: 5px 5px 5px 5px;
+    background-color: var(--color-crema);
+    margin: 0;
+    padding: 20px;
     line-height: 1.6;
-    background-image: url('/images/FONDOS-INVITACIONES-R-C (1080 x 1920 px) (1).webp');
+    min-height: 100vh;
+    transition: background-size 0.5s ease-in-out;
+}
+/* Clase para la vista inicial */
+.bg-cover {
+    background-image: url(/images/11.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 100vh;
+}
+
+/* Clase para la vista de la invitación */
+.bg-contain {
+    background-image: url(/images/11.png);
+    background-repeat: round;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--color-crema); /* Fondo de respaldo para evitar espacios en blanco */
 }
 #overlay {
     position: absolute;
@@ -33,37 +45,35 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
     cursor: pointer;
     transition: all 0.5s ease;
 }
 #initials {
     animation: heartbeat 1.5s infinite;
-    font-family: var(--font-family-main);
+    font-family: var(--font-cinzel);
     font-size: 200px;
-    font-weight: 200;
-    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
-    -webkit-background-clip: text;
-    color: transparent;
+    font-weight: 800;
     text-align: center;
     padding: 20px;
     cursor: pointer;
     position: relative;
+    color: indianred;
 }
 #hover-text {
+    color: white;
     position: absolute;
     bottom: 250px;  /* Ajusta esta propiedad para cambiar la distancia vertical desde #initials */
     transform: translateX(-50%);
-    color: white;
     font-size: 20px;
-    font-family: var(--font-family-main);
+    font-family: var(--font-family-title);
+    font-weight: bold;
     opacity: 1;  /* Siempre visible */
     white-space: nowrap;
     pointer-events: none;  /* Evita que el texto interfiera con el clic */
     padding: 10px 20px;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .hidden {
     display: none;
 }
@@ -91,11 +101,12 @@ a:hover {
     text-align: center;
 }
 .contenedor-play h1 {
-    font-family: var(--font-family-secondary);
-    color: azure;
+    font-family: var(--font-garamond);
+    color: maroon;
     font-size: 30px;
-    font-weight: 100;
+    font-weight: bold;
     margin-top: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .icono-contenedor {
     cursor: pointer;
@@ -105,8 +116,8 @@ a:hover {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: aliceblue;
-    color: goldenrod;
+    background: var(--highlight-color);
+    color: indianred;
 }
 .icono-contenedor i {
     font-size: 22px;
@@ -118,34 +129,28 @@ a:hover {
     padding: 0;
 }
 .contenedor-central h1 {
-    font-family: var(--font-family-secondary);
     font-size: 70px;
-    color: azure;
-    font-weight: 100;
     margin-top: 10px;
     margin-bottom: 0px;
+    font-family: var(--font-garamond);
+    color: maroon;
+    font-weight: bold;
 }
 .contenedor-central h2 {
-    font-family: var(--font-family-secondary);
-    font-size: 90px;
+    font-family: var(--font-cinzel);
+    font-size: 100px;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-weight: 200;
-    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
-    -webkit-background-clip: text;
-    color: transparent;
+    font-weight: 500;
     animation: shine 1.5s infinite linear;
+    color: indianred;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
-.contenedor-central h4 {
-    font-family: var(--font-family-secondary);
-    font-size: 80px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-weight: 200;
-    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: shine 1.5s infinite linear;
+.contenedor-central h4{
+    font-family: var(--font-cinzel);
+    font-size: 40px;
+    color: indianred;
+    font-weight: 500;
 }
 @keyframes shine {
     0% {
@@ -156,10 +161,12 @@ a:hover {
     }
 }
 .contenedor-central p {
-    font-family: var(--font-family-secondary);
-    color: azure;
+    font-family: var(--font-cinzel);
+    font-weight: 500;
+    color: maroon;
     font-size: 50px;
     margin-top: 0px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .contador {
     display: flex;
@@ -168,6 +175,7 @@ a:hover {
     background: transparent;
     padding: 20px;
     margin-top: -10px;
+    margin-bottom:60px;
 }
 .unidad {
     display: flex;
@@ -184,28 +192,28 @@ a:hover {
 .numero {
     font-size: 2.5em;
     margin-bottom: 5px;
-    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: indianred;
     animation: shine 1.5s infinite linear;
+    font-family: var(--font-cinzel);
+    font-weight: 500;
 }
 .etiqueta {
     font-size: 1em;
-    color: var(--button-color);
     text-transform: none;
     font-weight: 400;
-    background: linear-gradient(to right, #b29a68, #d4af37, #ffd700, #d4af37, #b29a68);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: indianred;
     animation: shine 1.5s infinite linear;
+    font-family: var(--font-cinzel);
+    font-weight: 600;
 }
 .contenedor-central h3 {
-    font-family: var(--font-family-main);
-    color:  azure;
-    font-size: 30px;
+    font-family: var(--font-garamond);
+    color: maroon;
+    font-size: 40px;
     margin: 40px;
-    font-weight: 400;
-    font-style: oblique;
+    font-weight: 300;
+    font-style: none;
+    margin-top: -40px;
 }
 .galeria {
     display: grid;
@@ -240,7 +248,7 @@ a:hover {
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    background-color: white;
+    background-color: #fef7f3;
     width: var(--card-width);
     height: var(--card-height);
 }
@@ -250,33 +258,34 @@ a:hover {
     height: auto;
 }
 .card h1 {
-    font-family: var(--font-family-secondary);
-    color: midnightblue;
-    font-size: 40px;
+    font-family: var(--font-cinzel);
+    color: var(--primary-color);
+    font-size: 35px;
+    text-shadow: none;
 }
 .card h2 {
-    font-family: var(--font-family-main);
-    color: midnightblue;
-    font-size: 17px;
-    margin-top: -10px;
+    font-family: var(--font-garamond);
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     font-weight: 300;
-    font-size: oblique;
+    text-shadow: none;
 }
 .card h3 {
-    font-family: var(--font-family-main);
-    color: midnightblue;
-    font-size: 16px;
+    font-family: var(--font-garamond);
+    color: var(--primary-color);
+    font-size: 18px;
     margin-top: -5px;
     font-weight: 300;
-    font-style: oblique;
 }
 .card h4 {
-    font-family: var(--font-family-main);
+    font-family: var(--font-garamond);
     font-weight: 300;
-    color: midnightblue;
-    font-size: 16px;
+    color: var(--primary-color);
+    font-size: 17px;
     margin-top: -35px;
-    font-style: oblique;
+    text-shadow: none;
 }
 .boton {
     display: inline-block;
@@ -285,12 +294,13 @@ a:hover {
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
-    background: goldenrod;
+    background: indianred;
     color: white;
+    font-family: var(--font-cinzel);
 }
 .card p{
-    font-family: var(--font-family-main);
-    color: midnightblue;
+    font-family: var(--font-garamond);
+    color: var(--primary-color);
     font-size: 30px;
     margin-top: 10px;
     font-weight: 300;
@@ -301,11 +311,13 @@ a:hover {
 }
 #card8 {
     width: 290px;
-    height: 515px;
+    height: 440px;
+    padding: 0;
 }
 #card8 img {
     width: 290px;
-    height: auto;
+    height: 440px;
+    padding: 0;
 }
 @keyframes fadeIn {
     from {
@@ -322,18 +334,18 @@ a:hover {
     animation: fadeIn 1.2s ease-out forwards;
 }
 h5 {
-    font-family: var(--font-family-secondary);
-    font-size: 80px;
+    font-family: var(--font-garamond);
+    font-size: 50px;
     margin-top: -60px;
-    font-weight: 200;
-    color: azure;
+    font-weight: 500;
+    color: maroon;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 h6{
-    font-family: var(--font-family-secondary);
-    font-size: 45px;
-    color: midnightblue;
+    font-family: var(--font-cinzel);
+    font-size: 30px;
+    color: var(--primary-color);
     margin-bottom: 5px;
     margin-top: 60px;
 }
@@ -351,72 +363,73 @@ h6{
         padding: 0;
     }
         #initials {
-            font-size: 120px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+            font-size: 110px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
             padding: 10px;
+            font-weight: 600;
         }
     
         #hover-text {
-            font-size: 16px; /* Ajustar el tamaño del texto para mantener la proporción */
+            font-size: 25px; /* Ajustar el tamaño del texto para mantener la proporción */
             padding: 8px 16px;
-            bottom: 220px; /* Ajustar la posición para pantallas pequeñas */
+            bottom: 300px; /* Ajustar la posición para pantallas pequeñas */
             margin: 0 0 0 0;
+            font-style: oblique;
         }
+    .contenedor-play h1{
+        font-style: oblique;
+    }
     .contenedor-central h1 {
-        margin-top: 20px;
-        font-size: 32px;
-        font-weight: 200;
+        margin-top: 10px;
+        font-size: 35px;
         margin-bottom: 20px;
+        font-style: oblique;
     }
-
     .contenedor-central h2 {
-        font-size: 70px;
-        margin-top: -30px;
+        font-size: 65px;
+        font-weight: 500;
+        margin-top: -20px;
     }
-
     .contenedor-central h4{
-        font-size: 50px;
+        font-size: 30px;
         margin-bottom: -10px;
         margin-top: -10px;
     }
-
     .contenedor-central p {
         font-size: 30px;
         margin-top: 0;
         margin-bottom: 0;
     }
-    
     .contenedor-central h5{
         font-size: 30px;
         margin-top: 0;
-        color: azure;
         margin-bottom: 20px;
+        font-style: oblique;
     }
     .unidad {
         width: 80px; /* Ajusta el tamaño según sea necesario */
         height: 80px; /* Ajusta el tamaño según sea necesario */
         margin: 5px;
     }
-
     .numero {
         font-size: 1.8em; /* Ajusta el tamaño según sea necesario */
     }
-
     .etiqueta {
         font-size: 0.8em; /* Ajusta el tamaño según sea necesario */
     }
-
-    .contenedor-central h3 {
-        font-size: 20px;
-        margin: 10px;
+    .contador{
+        margin-bottom: -10px;
     }
-
+    .contenedor-central h3 {
+        font-size: 26px;
+        margin: 5px;
+        font-style: oblique;
+    }
     .card img {
-        width: 30%;
+        width: 42%;
     }
     .galeria {
         grid-template-columns: 1fr;
     }
-
     .contenedor-cards {
         grid-template-columns: 1fr;
     }
@@ -424,40 +437,38 @@ h6{
         grid-template-columns: 1fr;
     }
     .card h1{
-        color: midnightblue;
-        font-size: 36px;
-        margin-bottom: 20px;
+        font-size: 25px;
+        margin-bottom: 5px;
+        font-style: normal;
     }
     .card h2{
-        color: midnightblue;
         font-size: 20px;
-        font-style: oblique;
         margin-top: 10px;
+        font-style: oblique;
     }
     .card h3{
-        color: midnightblue;
-        font-size: 18px;
-        margin-top: 10px;
+        font-size: 20px;
+        margin-top: 5px;
+        font-style: oblique;
     }
     .card h4{
-        color: midnightblue;
-        font-size: 16px;
-        margin-top: 10px;
+        font-size: 20px;
+        font-style: oblique;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     .card p{
-        font-family: var(--font-family-main);
-        color: midnightblue;
+        font-family: var(--font-garamond);
         font-size: 25px;
         font-style: oblique;
         margin-bottom: 10px;
         margin-top: 30px;
     }
     h6{
-        font-family: var(--font-family-secondary);
-        font-size: 45px;
-        color: midnightblue;
+        font-size: 25px;
         margin-bottom: 5px;
         margin-top: 60px;
+        font-weight: 600;
     }
 }
 
