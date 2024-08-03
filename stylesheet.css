@@ -29,9 +29,8 @@ body {
 
 /* Clase para la vista de la invitación */
 .bg-contain {
-    background-image: url(/images/1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(/images/11.png);
+    background-size: contain;
     background-position: center;
 }
 #overlay {
