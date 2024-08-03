@@ -30,8 +30,8 @@ body {
 /* Clase para la vista de la invitación */
 .bg-contain {
     background-image: url(/images/11.png);
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: right;
 }
 #overlay {
     position: absolute;
